@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Hero } from "../toh-hero";
 
 @Component({
   selector: 'app-toh-detail',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./toh-detail.component.css']
 })
 export class TohDetailComponent {
-
+  @Input()  hero?: Hero;
 }

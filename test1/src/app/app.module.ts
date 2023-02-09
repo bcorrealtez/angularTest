@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TohDashboardComponent } from './components/toh-dashboard/toh-dashboard.component';
 import { TohHeroesComponent } from './components/toh-heroes/toh-heroes.component';
 import { TohDetailComponent } from './components/toh-detail/toh-detail.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TohDetailComponent } from './components/toh-detail/toh-detail.component
     HomeComponent,
     TohDashboardComponent,
     TohHeroesComponent,
-    TohDetailComponent
+    TohDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
