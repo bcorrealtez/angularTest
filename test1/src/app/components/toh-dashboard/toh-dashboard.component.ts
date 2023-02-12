@@ -1,12 +1,12 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { Hero } from "../toh-hero";
-import { TohHeroService } from "../toh-hero.service";
+import { Hero } from '../toh-hero';
+import { TohHeroService } from '../toh-hero.service';
 
 @Component({
-  selector: "app-toh-dashboard",
-  templateUrl: "./toh-dashboard.component.html",
-  styleUrls: ["./toh-dashboard.component.css"],
+  selector: 'app-toh-dashboard',
+  templateUrl: './toh-dashboard.component.html',
+  styleUrls: ['./toh-dashboard.component.css'],
 })
 export class TohDashboardComponent implements OnInit {
   heroes: Hero[] = [];

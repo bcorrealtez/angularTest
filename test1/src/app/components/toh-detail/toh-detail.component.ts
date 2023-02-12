@@ -1,16 +1,16 @@
-import { Component, Input } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
-import { Location } from "@angular/common";
-import { Hero } from "../toh-hero";
-import { TohHeroService } from "../toh-hero.service";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { Hero } from '../toh-hero';
+import { TohHeroService } from '../toh-hero.service';
 
 @Component({
-  selector: "app-toh-detail",
-  templateUrl: "./toh-detail.component.html",
-  styleUrls: ["./toh-detail.component.css"],
+  selector: 'app-toh-detail',
+  templateUrl: './toh-detail.component.html',
+  styleUrls: ['./toh-detail.component.css'],
 })
-export class TohDetailComponent {
-  @Input() hero?: Hero;
+export class TohDetailComponent implements OnInit {
+  hero: Hero | undefined;
   constructor(
     private route: ActivatedRoute,
     private heroService: TohHeroService,
@@ -22,7 +22,7 @@ export class TohDetailComponent {
   }
 
   getHero(): void {
-    const id = Number(this.route.snapshot.paramMap.get("id"));
+    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
     this.heroService.getHero(id).subscribe((hero) => (this.hero = hero));
   }
 

@@ -13,6 +13,7 @@ import { TohDashboardComponent } from "./components/toh-dashboard/toh-dashboard.
 import { TohHeroesComponent } from "./components/toh-heroes/toh-heroes.component";
 import { TohDetailComponent } from "./components/toh-detail/toh-detail.component";
 import { MessagesComponent } from "./components/messages/messages.component";
+import { TohSearchComponent } from './components/toh-search/toh-search.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MessagesComponent } from "./components/messages/messages.component";
     TohHeroesComponent,
     TohDetailComponent,
     MessagesComponent,
+    TohSearchComponent,
   ],
   imports: [
     BrowserModule,

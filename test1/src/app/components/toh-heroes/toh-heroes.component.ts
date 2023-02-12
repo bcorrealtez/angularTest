@@ -1,13 +1,12 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { Hero } from "../toh-hero";
-import { TohHeroService } from "../toh-hero.service";
-import { MessageService } from "../message.service";
+import { Hero } from '../toh-hero';
+import { TohHeroService } from '../toh-hero.service';
 
 @Component({
-  selector: "app-toh-heroes",
-  templateUrl: "./toh-heroes.component.html",
-  styleUrls: ["./toh-heroes.component.css"],
+  selector: 'app-toh-heroes',
+  templateUrl: './toh-heroes.component.html',
+  styleUrls: ['./toh-heroes.component.css'],
 })
 export class TohHeroesComponent implements OnInit {
   heroes: Hero[] = [];
@@ -30,5 +29,10 @@ export class TohHeroesComponent implements OnInit {
     this.heroService.addHero({ name } as Hero).subscribe((hero) => {
       this.heroes.push(hero);
     });
+  }
+
+  delete(hero: Hero): void {
+    this.heroes = this.heroes.filter((h) => h !== hero);
+    this.heroService.deleteHero(hero.id).subscribe();
   }
 }
