@@ -1,8 +1,9 @@
-<h2>Top Heroes</h2>
-<div class="heroes-menu">
-    <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
-        {{hero.name}}
-    </a>
+<div fxLayout="column" fxLayoutAlign="center center">
+    <h2>Top Heroes</h2>
+    <div class="heroes-menu" fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="center center" fxLayoutGap="15px">
+        <a *ngFor="let hero of heroes" ngClass="colItems" ngClass.gt-md="" fxFlex.gt-md="150px" routerLink="/detail/{{hero.id}}">
+            {{hero.name}}
+        </a>
+    </div>
+    <app-toh-search></app-toh-search>
 </div>
-
-<app-toh-search></app-toh-search>

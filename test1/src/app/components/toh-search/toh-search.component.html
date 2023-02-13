@@ -1,10 +1,10 @@
-<div id="search-component">
+<div id="search-component" fxLayout="column" fxLayoutAlign="center center">
     <label for="search-box">Hero Search</label>
     <input #searchBox id="search-box" (input)="search(searchBox.value)">
 
-    <ul class="search-result">
-        <li *ngFor="let hero of heroes$ | async">
-            <a routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
+    <ul class="search-result" fxLayout="column">
+        <li *ngFor="let hero of heroes$ | async" fxLayout="row" fxLayoutAlign="start">
+            <a routerLink="/detail/{{hero.id}}" fxFlex="100%">{{hero.name}}</a>
         </li>
     </ul>
 </div>
