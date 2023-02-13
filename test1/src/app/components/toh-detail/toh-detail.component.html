@@ -1,10 +1,17 @@
-<div *ngIf="hero">
+<div *ngIf="hero" fxLayout="column" fxLayoutAlign="auto center" fxFlex="100%" fxLayoutGap="20px">
     <h2>{{hero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{hero.id}}</div>
-    <div>
-        <label for="hero-name">Hero name: </label>
-        <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name">
+    <div fxLayout="row" >
+        <div fxLayout="column" fxFlex="50%" fxLayoutAlign="start start" fxLayoutGap="20px">
+            <span>ID</span>
+            <span>{{hero.id}}</span>
+        </div>
+        <div fxLayout="column" fxFlex="50%" fxLayoutGap="10px">
+            <label for="hero-name">Hero name</label>
+            <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name">
+        </div>
     </div>
-    <button type="button" (click)="goBack()">Go Back</button>
-    <button type="button" (click)="save()">save</button>
+    <div fxLayout="row" fxLayoutGap="10px">
+        <button type="button" fxFlex="60%" (click)="goBack()">Go Back</button>
+        <button type="button" fxFlex="40" (click)="save()">Save</button>
+    </div>
 </div>

@@ -6,9 +6,9 @@
         <input id="new-hero" #heroName>       
     </div>
     <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">Add hero</button>
-    <ul class="heroes">
-        <li *ngFor="let hero of heroes" fxLayout="column">
-            <a routerLink="/detail/{{hero.id}}" fxLayout="row">
+    <ul class="heroes" fxLayout="column" fxLayoutGap="10px">
+        <li *ngFor="let hero of heroes" fxLayout="row" fxLayoutAlign="stretch" >
+            <a routerLink="/detail/{{hero.id}}" fxFlex="100%" fxLayoutAlign="stretch" >
                 <span class="badge">{{hero.id}}</span>{{hero.name}}
             </a>
             <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
