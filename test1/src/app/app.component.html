@@ -1,9 +1,12 @@
-<div class="container">
-  <h1>{{title}}</h1>
-  <nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/heroes">Heroes</a>
-  </nav>
-  <router-outlet></router-outlet>
-  <app-messages></app-messages>
+<div fxLayout="row" fxLayout="">
+  <div fxLayout="column" fxFlex="100%" fxLayoutAlign="center center" fxLayoutGap="20px">
+    <h1>{{title}}</h1>
+    <nav>
+      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/heroes">Heroes</a>
+    </nav>
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
+  </div>
+  
 </div>

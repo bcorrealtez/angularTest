@@ -3,6 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { InMemoryDataService } from "./in-memory-data.service";
 import { AppRoutingModule } from "./app-routing.module";
@@ -13,7 +14,7 @@ import { TohDashboardComponent } from "./components/toh-dashboard/toh-dashboard.
 import { TohHeroesComponent } from "./components/toh-heroes/toh-heroes.component";
 import { TohDetailComponent } from "./components/toh-detail/toh-detail.component";
 import { MessagesComponent } from "./components/messages/messages.component";
-import { TohSearchComponent } from './components/toh-search/toh-search.component';
+import { TohSearchComponent } from "./components/toh-search/toh-search.component";
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { TohSearchComponent } from './components/toh-search/toh-search.component
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    FlexLayoutModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
