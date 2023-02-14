@@ -4,6 +4,12 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatTableModule } from "@angular/material/table";
+import { MatInputModule } from "@angular/material/input";
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
+import { MatExpansionModule } from "@angular/material/expansion";
 
 import { InMemoryDataService } from "./in-memory-data.service";
 import { AppRoutingModule } from "./app-routing.module";
@@ -30,6 +36,12 @@ import { TohSearchComponent } from "./components/toh-search/toh-search.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatExpansionModule,
+    MatTableModule,
     FormsModule,
     FlexLayoutModule,
     HttpClientModule,

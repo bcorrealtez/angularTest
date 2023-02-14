@@ -8,4 +8,5 @@ import { AppRoutingModule } from "./app-routing.module";
 })
 export class AppComponent {
   title = "Tour of Heroes";
+  panelOpenState = false;
 }
